@@ -1,8 +1,8 @@
 {
-    "rows": 10,
-    "cols": 10,
-    "difficulty": 5,
-    "cell_size": 50,
+    "rows": 50,
+    "cols": 50,
+    "difficulty": 10,
+    "cell_size": 30,
     "cell_default_color": "#474747",
     "cell_open_color": "#CDCDCD",
     "cell_outline_color": "#0006bd",
