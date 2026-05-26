@@ -39,7 +39,7 @@ class MainMenu:
             text="GitHub проєкту",
             fg_color=("#D6D6D6", "#8A8A8A"),
             hover_color=("#C0C0C0", "#707070"),
-            command=lambda: webbrowser.open_new_tab("https://github.com/TheInfani/Saper_kursach"),
+            command=lambda: webbrowser.open_new_tab("https://github.com/TheInfani/Saper_kursach2"),
             audio=self.app.audio,
         )
         github_btn.pack(pady=10)
