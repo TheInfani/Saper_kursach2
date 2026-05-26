@@ -1,0 +1,16 @@
+{
+    "rows": 10,
+    "cols": 10,
+    "difficulty": 5,
+    "cell_size": 50,
+    "cell_default_color": "#474747",
+    "cell_open_color": "#CDCDCD",
+    "cell_outline_color": "#0006bd",
+    "flag_color": "#0c8628",
+    "timer": 30,
+    "buttons_visible": false,
+    "theme": "dark",
+    "extra_dpi": false,
+    "music_volume": 0.3,
+    "sfx_volume": 0.1499999999999999
+}
