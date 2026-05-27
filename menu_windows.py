@@ -268,7 +268,7 @@ class GameSettingsMenu:
         if cell_size < 10:
             ErrorWindow(self.root, "Введіть розмір\nклітинки більше 10", "230x120", audio=self.app.audio)
             return None
-        if timer < 0:
+        if timer < 0 or timer > 3600:
             ErrorWindow(self.root, "Введіть додатне значення часу,\nчи 0 для відключення таймера", "400x120", audio=self.app.audio)
             return None
 
@@ -288,7 +288,7 @@ class GameSettingsMenu:
         self.preview_canvas.create_rectangle(102 + cell_size, 100, 102 + cell_size + cell_size, 100 + cell_size, fill=self.cell_default_color)
         self.preview_canvas.create_rectangle(102 + cell_size, 100, 102 + cell_size + cell_size, 100 + cell_size, outline=self.cell_outline_color, width=1)
         self.preview_canvas.create_rectangle(102 + cell_size, 99, 102 + cell_size + cell_size + 1, 100 + cell_size + 1, outline=self.cell_outline_color, width=1)
-        self.preview_canvas.create_text(102 + cell_size + cell_size / 2, 98 + cell_size / 2, text="Ф", font=("Arial", round(cell_size / 3), "bold"), fill=self.flag_color)
+        self.preview_canvas.create_text(102 + cell_size + cell_size / 2, 98 + cell_size / 2, text="🚩", font=("Arial", round(cell_size / 3), "bold"), fill=self.flag_color)
         self.preview_canvas.create_text(100 + cell_size / 2, 100 + cell_size / 2, text="1", font=("Arial", round(cell_size / 3), "bold"), fill="blue")
 
         self.calculate_max_size()

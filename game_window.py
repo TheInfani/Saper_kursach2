@@ -251,13 +251,13 @@ class GameWindow:
         x = (col * (self.cell_size + 1) - self.cell_size + 1) + (self.cell_size / 2)
         y = (row * (self.cell_size + 1) - self.cell_size + 1) + (self.cell_size / 2)
 
-        if char == "М":
+        if char == "💣":
             x1, y1, x2, y2 = self.cell_rect(col, row)
             self.canvas.create_rectangle(x1, y1, x2, y2, fill="#940808")
             self.canvas.create_text(x, y, text=str(char), font=("Segoe UI Emoji", self.num_size))
             return
 
-        if char == "Ф":
+        if char == "🚩":
             color = self.settings.flag_color
         elif int(char) == 1:
             color = "blue"
@@ -317,7 +317,7 @@ class GameWindow:
         # КІНЕЦЬ ГРИ НА МІНІ
         if self.board.is_mine(col, row):
             self.show_lose_window(lose_from_mine=True)
-            self.draw_text(col, row, "М")
+            self.draw_text(col, row, "💣")
             return
 
         count = self.board.count_mines_around(col, row)
@@ -341,7 +341,7 @@ class GameWindow:
         self.app.audio.play_open()
         result = self.board.toggle_flag(col, row)
         if result is True:
-            self.draw_text(col, row, "Ф")
+            self.draw_text(col, row, "🚩")
         elif result is False:
             x1, y1, x2, y2 = self.cell_rect(col, row)
             self.canvas.create_rectangle(x1, y1, x2, y2, fill=self.settings.cell_default_color)
@@ -431,7 +431,7 @@ class GameWindow:
         for col in range(self.settings.cols):
             for row in range(self.settings.rows):
                 if self.board.mines[row][col] == 1:
-                    self.draw_text(col + 1, row + 1, "М")
+                    self.draw_text(col + 1, row + 1, "💣")
 
     # Екран поразки
     def show_lose_window(self, lose_from_mine: bool = True):
@@ -493,7 +493,7 @@ class GameWindow:
         for col in range(self.settings.cols):
             for row in range(self.settings.rows):
                 if self.board.mines[row][col] == 1 and self.board.flags[row][col] == 0:
-                    self.draw_text(col + 1, row + 1, "Ф")
+                    self.draw_text(col + 1, row + 1, "🚩")
                     self.board.flags[row][col] = 1
                     self.board.mine_count -= 1
                     self.update_mines_label()
