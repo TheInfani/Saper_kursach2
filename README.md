@@ -20,7 +20,7 @@ A short practical guide for cloning the repository and setting up an isolated Py
 Open a terminal (or command prompt) and run:
 
 ```bash
-git clone https://github.com/TheInfani/Saper_kursach.git
+git clone https://github.com/TheInfani/Saper_kursach2.git
 ```
 
 ---
@@ -28,7 +28,7 @@ git clone https://github.com/TheInfani/Saper_kursach.git
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd Saper_kursach
+cd Saper_kursach2
 ```
 
 ---
